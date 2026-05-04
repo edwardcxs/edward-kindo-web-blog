@@ -13,16 +13,23 @@ import { VelocityText } from './components/VelocityText';
 
 import { Blog } from './components/Blog';
 import { Article } from './components/Article';
+import { PrivacyPolicy } from './components/PrivacyPolicy';
 import { ARTICLES } from './constants/articles';
 
 const App: React.FC = () => {
-  const [view, setView] = useState<'home' | 'gallery' | 'blog' | 'article'>('home');
+  const [view, setView] = useState<'home' | 'gallery' | 'blog' | 'article' | 'privacy'>('home');
   const [selectedArticleId, setSelectedArticleId] = useState<string | null>(null);
 
   const handleNavigate = (sectionId: string) => {
     // Special cases
     if (sectionId === 'blog') {
       setView('blog');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      return;
+    }
+
+    if (sectionId === 'privacy') {
+      setView('privacy');
       window.scrollTo({ top: 0, behavior: 'smooth' });
       return;
     }
@@ -139,6 +146,10 @@ const App: React.FC = () => {
               onBack={() => setView('blog')} 
               onSelectArticle={handleSelectArticle}
             />
+          )}
+
+          {view === 'privacy' && (
+            <PrivacyPolicy onBack={() => setView('home')} />
           )}
         </main>
         

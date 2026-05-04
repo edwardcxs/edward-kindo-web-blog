@@ -21,9 +21,7 @@ export const ARTICLES: Article[] = [
 
 Artificial Intelligence is no longer a futuristic concept—it’s a practical tool shaping how we build apps, automate workflows, and solve real-world problems. But choosing the right platform can make or break your development experience. Among the many tools available today, **Google AI Studio** stands out as one of the best environments for building AI-powered applications.
 
-Let’s explore why.
-
----
+Let’s explore why
 
 ## 1. Beginner-Friendly Yet Powerful
 
@@ -201,15 +199,13 @@ Examples include Kali Linux and Arch Linux
     date: 'April 28, 2024',
     readTime: '4 min read',
     category: 'Technology',
-    image: '/images/linux.png'
+    image: '/images/linuxxx.png'
   },
   {
     id: 'linux Founder',
     title: '10 Fascinating Facts About Linus Torvalds',
     excerpt: 'When you talk about Linux, one name stands above all—Linus Torvalds. He’s not just the creator of Linux.',
     content: `
-      ## 🐧 Fascinating Facts About Linus Torvalds
-
 When you talk about Linux, one name stands above all—Linus Torvalds. He’s not just the creator of Linux; he’s one of the most influential figures in modern computing. Let’s explore some interesting and lesser-known facts about him from a tech and engineering perspective.
 
 ## 🚀 1. He Created Linux as a Student Project
@@ -601,5 +597,83 @@ That’s the vibe. 🚀
     readTime: '4 min read',
     category: 'Technology',
     image: '/images/vibe1.png'
+  },
+  {
+    id: 'Coding1',
+    title: 'How to Connect Using SSH (Secure Shell) – Beginner Friendly Guide ',
+    excerpt: 'When you talk about Linux, one name stands above all—Linus Torvalds. He’s not just the creator of Linux.',
+    content: `
+SSH (Secure Shell) is a secure way to connect to another computer or server over a network. It’s widely used by developers, system admins, and engineers to manage remote machines safely.
+
+## What is SSH?
+SSH is a protocol that lets you:
+* Access a remote server
+* Execute commands remotely
+* Transfer files securely
+It encrypts all communication, making it much safer than older methods like Telnet.
+## Basic Requirements
+Before connecting via SSH, you need:
+* A remote server IP address (e.g., 192.168.1.1)
+* A username (e.g., root, ubuntu)
+* A password or SSH key file
+## Method 1: Connect Using Password
+📌 Step 1: Open Terminal
+On Linux or macOS,
+* Open your terminal
+On Windows, use:
+* Command Prompt
+* PowerShell or tools like PuTTY
+📌 Step 2: Run SSH Command
+\`\`\`bash
+ssh username@ip_address
+\`\`\`
+👉 Example:
+\`\`\`bash
+ssh ubuntu@192.168.1.10
+\`\`\`
+📌 Step 3: Enter Password
+* First time: type yes to continue
+* Enter your password (it won’t show while typing)
+✅ You’re now connected!
+## Method 2: Connect Using SSH Key (Recommended)
+More secure than passwords.
+📌 Step 1: Generate SSH Key (if you don’t have one)
+\`\`\`bash
+ssh-keygen
+\`\`\`
+Press Enter to accept defaults.
+📌 Step 2: Copy Key to Server
+\`\`\`bash
+ssh-copy-id username@ip_address
+\`\`\`
+📌 Step 3: Connect
+\`\`\`bash
+ssh username@ip_address
+\`\`\`
+No password needed 🎉
+## Method 3: Connect Using Private Key File
+If you already have a .pem or private key:
+\`\`\`bash
+ssh -i keyfile.pem username@ip_address
+\`\`\`
+👉 Example:
+\`\`\`bash
+ssh -i mykey.pem ubuntu@192.168.1.10
+\`\`\`
+## Windows Users (Easy Way)
+You can use:
+* Windows Terminal (modern)
+* Or tools like PuTTY
+  Using PuTTY:
+* Enter IP address
+* Select SSH
+* Load your .ppk key (if needed)
+* Click Open
+    `,
+    author: 'Edward Kindo',
+    date: 'April 28, 2024',
+    readTime: '4 min read',
+    category: 'Coding',
+    image: '/images/ss2.png'
   }
 ];

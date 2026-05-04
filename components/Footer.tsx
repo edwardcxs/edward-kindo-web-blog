@@ -95,6 +95,13 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
             <p>&copy; {currentYear} Edward Kindo.</p>
             <span className="hidden md:inline text-slate-800">|</span>
             <p>All Rights Reserved.</p>
+            <span className="hidden md:inline text-slate-800">|</span>
+            <button 
+              onClick={() => onNavigate('privacy')}
+              className="hover:text-blue-500 transition-colors duration-150"
+            >
+              Privacy Policy
+            </button>
           </div>
 
           <button 
