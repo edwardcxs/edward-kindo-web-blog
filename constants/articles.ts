@@ -204,6 +204,124 @@ Examples include Kali Linux and Arch Linux
     image: '/images/linux.png'
   },
   {
+    id: 'linux Founder',
+    title: '10 Fascinating Facts About Linus Torvalds',
+    excerpt: 'When you talk about Linux, one name stands above all—Linus Torvalds. He’s not just the creator of Linux.',
+    content: `
+      ## 🐧 Fascinating Facts About Linus Torvalds
+
+When you talk about Linux, one name stands above all—Linus Torvalds. He’s not just the creator of Linux; he’s one of the most influential figures in modern computing. Let’s explore some interesting and lesser-known facts about him from a tech and engineering perspective.
+
+## 🚀 1. He Created Linux as a Student Project
+
+Linus Torvalds started working on Linux in 1991 while studying at the University of Helsinki.
+
+* It began as a personal project
+* Inspired by another OS called MINIX
+* Initially meant just for learning, not global use
+
+Today, that “small project” powers the internet.
+
+## 💡 2. Linux Was Never Meant to Be Famous
+
+Torvalds originally shared Linux on an online forum just for fun and feedback.
+
+* He didn’t expect mass adoption
+* It grew because developers worldwide contributed
+
+This is how open-source collaboration took off.
+
+## 🌍 3. Linux Powers the Modern World
+
+Linux is everywhere today:
+
+* Servers and cloud systems
+* Android smartphones
+* Supercomputers
+
+Companies like Google, Amazon, and Microsoft rely on Linux-based systems.
+
+## 🧠 4. He Also Created Git
+
+In 2005, Torvalds developed Git, one of the most widely used version control systems.
+
+* Built to manage Linux development
+* Now used by millions of developers worldwide
+
+Platforms like GitHub are based on Git.
+
+## 😄 5. He Has a Unique Personality
+
+Linus is known for being:
+
+* Direct and honest
+* Sometimes blunt in communication
+* Focused purely on technical quality
+
+This personality shaped the strict standards of Linux development.
+
+## 🐧 6. The Penguin Mascot “Tux”
+
+The Linux mascot, Tux, has a fun origin.
+
+* Torvalds loves penguins
+* The mascot name “Tux” was suggested by the community
+
+Now, Tux is a global symbol of open-source culture.
+
+## 💻 7. He Doesn’t Like Over-Complicated Systems
+
+Torvalds believes in:
+
+* Simplicity
+* Efficiency
+* Clean code
+
+His philosophy:
+👉 “Good code is simple and works well.”
+
+## 🏆 8. Awards and Recognition
+
+He has received many honors:
+
+* Millennium Technology Prize
+* Multiple honorary doctorates
+
+Despite this, he remains focused on coding rather than fame.
+
+## 🔓 9. Strong Advocate of Open Source
+
+Torvalds believes software should be:
+
+* Open
+* Collaborative
+* Transparent
+
+Linux is licensed under the GNU General Public License, ensuring it stays free and open.
+
+## 🌐 10. Still Actively Involved
+
+Even today, Linus Torvalds:
+
+* Reviews Linux kernel code
+* Manages contributions
+* Guides development
+
+He remains the core maintainer of the Linux kernel.
+
+🚀 Final Thoughts
+
+Linus Torvalds didn’t just create an operating system—he started a movement that changed how software is built and shared. From a simple student project to powering the entire digital world, his journey shows the power of curiosity, consistency, and open collaboration.
+
+If you’re learning programming or Linux, understanding his story can give you serious inspiration.
+    `,
+    author: 'Edward Kindo',
+    date: 'April 28, 2024',
+    readTime: '4 min read',
+    category: 'Technology',
+    image: '/images/linus.png'
+  },
+  {
     id: 'linux1',
     title: 'Basic Linux Commands You Should Know!',
     excerpt: 'A deep dive into why Framer Motion is the gold standard for React animations.',
@@ -320,5 +438,75 @@ Check system performance and details.
     readTime: '8 min read',
     category: 'Linux',
     image: '/images/linux1.png'
+  },
+  {
+    id: 'linuxssh',
+    title: '5 Powerful SSH Tools for Windows, Linux, and macOS',
+    excerpt: 'A deep dive into why Framer Motion is the gold standard for React animations.',
+    content: `
+## 1. OpenSSH (Built-in & Powerful)
+
+OpenSSH is the default SSH tool in most Linux and macOS systems and is now included in Windows as well.
+
+Why use it?
+* Pre-installed on most systems
+* Lightweight and fast
+* Highly secure and widely trusted
+Example:
+\`\`\`bash
+ssh user@server-ip
+\`\`\`
+
+👉 Best for: Developers who prefer command-line control.
+
+## 2. PuTTY (Best for Windows Users)
+
+PuTTY is one of the most popular SSH clients for Windows.
+
+Features:
+* Simple graphical interface
+* Supports SSH, Telnet, and serial connections
+* Lightweight and easy to install
+
+👉 Best for: Beginners using Windows who want a GUI-based SSH client.
+
+## 3. MobaXterm (All-in-One Toolkit)
+
+MobaXterm is a powerful SSH client with many extra tools built in.
+
+Features:
+* Integrated terminal with Unix commands
+* File transfer (SFTP) support
+* Multi-session tabs
+
+👉 Best for: Advanced users who want everything in one place.
+
+## 4. Termius (Modern Cross-Platform Tool)
+
+Termius is a modern SSH client with a clean UI available on Windows, macOS, Linux, and even mobile.
+
+Features:
+* Sync hosts across devices
+* Beautiful interface
+* Supports key-based authentication
+
+👉 Best for: Users who want a modern and synced SSH experience.
+
+## 5. SecureCRT (Professional Tool)
+
+SecureCRT is a premium SSH client used in enterprise environments.
+
+Features:
+* Advanced session management
+* Strong encryption and security
+* Automation and scripting support
+
+👉 Best for: Professionals and enterprise-level usage.
+    `,
+    author: 'Edward Kindo',
+    date: 'April 10, 2024',
+    readTime: '8 min read',
+    category: 'Linux',
+    image: '/images/ssh.png'
   }
 ];
