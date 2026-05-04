@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Edward Kindo | UI/UX Designer</title>
+  <!-- HTML Meta Tags -->
+  <meta name="description"
+    content="I’m Edward Kindo, a graphic designer and web developer who builds bold, modern digital experiences with a focus on clarity and impact. I work at the intersection of design and code, creating visuals and websites that are clean, functional, and intentionally different. From strong visual identities to responsive web interfaces, my approach is about solving problems, not just making things look good. I believe good design should communicate clearly, load fast, and leave a lasting impression—simple, honest, and built with purpose.">
+
+  <!-- Facebook Meta Tags -->
+  <meta property="og:url" content="https://www.edwardkindo.in">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Edward Kindo | UI/UX Designer | Web Designer">
+  <meta property="og:description"
+    content="I’m Edward Kindo, a graphic designer and web developer who builds bold, modern digital experiences with a focus on clarity and impact. I work at the intersection of design and code, creating visuals and websites that are clean, functional, and intentionally different. From strong visual identities to responsive web interfaces, my approach is about solving problems, not just making things look good. I believe good design should communicate clearly, load fast, and leave a lasting impression—simple, honest, and built with purpose.">
+  <meta property="og:image" content="/images/card.png">
+
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="twitter:domain" content="edwardkindo.in">
+  <meta property="twitter:url" content="https://www.edwardkindo.in">
+  <meta name="twitter:title" content="Edward Kindo | UI/UX Designer | Web Designer">
+  <meta name="twitter:description"
+    content="I’m Edward Kindo, a graphic designer and web developer who builds bold, modern digital experiences with a focus on clarity and impact. I work at the intersection of design and code, creating visuals and websites that are clean, functional, and intentionally different. From strong visual identities to responsive web interfaces, my approach is about solving problems, not just making things look good. I believe good design should communicate clearly, load fast, and leave a lasting impression—simple, honest, and built with purpose.">
+  <meta name="twitter:image" content="/images/card.png">
+
+  <!-- Meta Tags Generated via https://www.opengraph.xyz -->
+
+  <!-- NOTE: You selected a new image. Please upload it to your server and replace "YOUR_IMAGE_URL_HERE" with the actual URL. -->
+  <link rel="icon" type="image/png" href="/favicon.png" />
+
+  <!-- Google tag (gtag.js) - Measurement ID: G-X6652NM91Q, Stream ID: 13139694660 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-X6652NM91Q"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-X6652NM91Q');
+  </script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#2563eb', // Blue-600 (More vivid)
+            secondary: '#1e40af', // Blue-800
+            dark: '#020617', // Slate-950 (Deep dark)
+            card: '#0f172a', // Slate-900
+          },
+          fontFamily: {
+            sans: ['Space Grotesk', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          backgroundImage: {
+            'grid-pattern': "linear-gradient(to right, #1e293b 1px, transparent 1px), linear-gradient(to bottom, #1e293b 1px, transparent 1px)",
+          },
+          backgroundSize: {
+            'grid-pattern': '40px 40px',
+          },
+        },
+      },
+    }
+  </script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Space Grotesk', sans-serif;
+    }
+
+    .font-mono {
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    /* Anti-design specific utilities */
+    .text-stroke {
+      -webkit-text-stroke: 1px rgba(255, 255, 255, 0.2);
+      color: transparent;
+    }
+
+    .glitch-hover:hover {
+      animation: glitch 0.3s cubic-bezier(.25, .46, .45, .94) both infinite;
+    }
+
+    @keyframes glitch {
+      0% {
+        transform: translate(0)
+      }
+
+      20% {
+        transform: translate(-2px, 2px)
+      }
+
+      40% {
+        transform: translate(-2px, -2px)
+      }
+
+      60% {
+        transform: translate(2px, 2px)
+      }
+
+      80% {
+        transform: translate(2px, -2px)
+      }
+
+      100% {
+        transform: translate(0)
+      }
+    }
+
+    /* Scroll Reveal Animation */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+      will-change: opacity, transform;
+    }
+
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.3",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "lucide-react": "https://esm.sh/lucide-react@^0.561.0",
+    "framer-motion": "https://esm.sh/framer-motion@11.0.3?external=react,react-dom"
+  }
+}
+</script>
+  <link rel="stylesheet" href="/index.css">
+</head>
+
+<body class="bg-dark text-white overflow-x-hidden">
+  <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+
+</html>
