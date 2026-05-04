@@ -1,6 +1,33 @@
-import React, { useEffect } from 'react';
-import { ArrowLeft, User, Calendar, Clock, Share2, Twitter, Linkedin, Copy, ArrowRight } from 'lucide-react';
+import React, { useEffect, useState } from 'react';
+import { ArrowLeft, User, Calendar, Clock, Share2, Twitter, Linkedin, Copy, ArrowRight, Check } from 'lucide-react';
 import { Article as ArticleType, ARTICLES } from '../constants/articles';
+
+const CodeBlock = ({ code }: { code: string }) => {
+  const [copied, setCopied] = useState(false);
+
+  const handleCopy = () => {
+    navigator.clipboard.writeText(code);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
+
+  return (
+    <div className="relative group my-8">
+      <div className="absolute right-2 top-2">
+        <button 
+          onClick={handleCopy}
+          className="p-2 bg-slate-800 text-slate-300 rounded hover:bg-slate-700 transition-colors focus:outline-none"
+          title="Copy code"
+        >
+          {copied ? <Check size={16} className="text-green-400" /> : <Copy size={16} />}
+        </button>
+      </div>
+      <pre className="bg-slate-900 text-slate-50 p-4 pt-12 rounded-lg overflow-x-auto font-mono text-sm leading-relaxed">
+        <code>{code}</code>
+      </pre>
+    </div>
+  );
+};
 
 interface ArticleProps {
   article: ArticleType;
@@ -97,19 +124,51 @@ export const Article: React.FC<ArticleProps> = ({ article, onBack, onSelectArtic
 
             {/* Content Area */}
             <div className="prose prose-slate max-w-none prose-headings:tracking-tight prose-headings:font-bold prose-h2:text-3xl prose-p:text-slate-600 prose-p:leading-relaxed prose-p:text-lg">
-                {article.content.split('\n').map((line, i) => {
-                    if (line.trim().startsWith('## ')) {
-                        return <h2 key={i} className="mt-12 mb-6 text-3xl font-bold text-slate-900">{line.replace('## ', '')}</h2>;
-                    }
-                    if (line.trim().startsWith('### ')) {
-                        return <h3 key={i} className="mt-8 mb-4 text-2xl font-bold text-slate-900">{line.replace('### ', '')}</h3>;
-                    }
-                    if (line.trim().startsWith('* ')) {
-                        return <li key={i} className="text-slate-600 mb-2 list-none flex items-center gap-3"><span className="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> {line.replace('* ', '')}</li>;
-                    }
-                    if (line.trim() === '') return <br key={i} />;
-                    return <p key={i} className="mb-6">{line}</p>;
-                })}
+                {(() => {
+                    const lines = article.content.split('\n');
+                    const elements: React.ReactNode[] = [];
+                    let inCodeBlock = false;
+                    let currentCodeBlock = '';
+                    
+                    lines.forEach((line, i) => {
+                        if (line.trim().startsWith('```')) {
+                            if (inCodeBlock) {
+                                currentCodeBlock = currentCodeBlock.replace(/\n$/, '');
+                                elements.push(<CodeBlock key={`code-${i}`} code={currentCodeBlock} />);
+                                inCodeBlock = false;
+                                currentCodeBlock = '';
+                            } else {
+                                inCodeBlock = true;
+                            }
+                            return;
+                        }
+
+                        if (inCodeBlock) {
+                            currentCodeBlock += line + '\n';
+                            return;
+                        }
+
+                        if (line.trim().startsWith('## ')) {
+                            elements.push(<h2 key={i} className="mt-12 mb-6 text-3xl font-bold text-slate-900">{line.replace('## ', '')}</h2>);
+                            return;
+                        }
+                        if (line.trim().startsWith('### ')) {
+                            elements.push(<h3 key={i} className="mt-8 mb-4 text-2xl font-bold text-slate-900">{line.replace('### ', '')}</h3>);
+                            return;
+                        }
+                        if (line.trim().startsWith('* ')) {
+                            elements.push(<li key={i} className="text-slate-600 mb-2 list-none flex items-center gap-3"><span className="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> {line.replace('* ', '')}</li>);
+                            return;
+                        }
+                        if (line.trim() === '') {
+                            elements.push(<br key={i} />);
+                            return;
+                        }
+                        elements.push(<p key={i} className="mb-6">{line}</p>);
+                    });
+
+                    return elements;
+                })()}
             </div>
         </div>
 

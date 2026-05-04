@@ -204,26 +204,121 @@ Examples include Kali Linux and Arch Linux
     image: '/images/linux.png'
   },
   {
-    id: 'framer-motion-guide',
-    title: 'Animating the Web with Framer Motion',
+    id: 'linux1',
+    title: 'Basic Linux Commands You Should Know!',
     excerpt: 'A deep dive into why Framer Motion is the gold standard for React animations.',
     content: `
-      ## The Power of Motion
-      Motion isn't just about "flashy" effects. It's about guiding the user's eye and creating a sense of physical space in a digital environment.
+      🐧 Basic Linux Commands You Should Know
 
-      ### Why Framer Motion?
-      Unlike traditional CSS animations, Framer Motion allows for complex, logic-driven transitions. You can animate based on component state, drag interactions, and scroll position with minimal code.
+Linux powers everything from servers and cloud platforms to Android devices. If you're getting started with programming, cybersecurity, or system administration, learning basic Linux commands is a must.
 
-      ### Staggered Entrances
-      One of the easiest ways to make a site feel premium is staggered animations. Instead of everything appearing at once, let them flow in one by one.
+This guide covers the essential commands you’ll use daily.
 
-      ### Layout Animations
-      The \`layout\` prop in Framer Motion is magical. It automatically handles the transition between different sizes and positions, making complex route transitions feel seamless.
+## 📁 1. Navigating the File System
+
+Before doing anything, you need to know where you are and how to move around.
+
+* pwd → Displays your current directory (Present Working Directory)
+* ls → Lists files and folders
+* cd <directory> → Changes directory
+* cd .. → Moves to the parent directory
+
+Example:
+
+\`\`\`bash
+pwd
+ls
+cd Documents
+\`\`\`
+
+## 📂 2. Managing Files and Directories
+
+Creating, moving, and deleting files is a core part of Linux usage.
+
+* mkdir <name> → Creates a new directory
+* touch <file> → Creates a new empty file
+* rm <file> → Deletes a file
+* cp <source> <destination> → Copies files
+* mv <source> <destination> → Moves or renames files
+
+Example:
+
+\`\`\`bash
+mkdir project
+touch app.py
+mv app.py project/
+\`\`\`
+
+## 📖 3. Viewing File Content
+
+These commands help you read files directly in the terminal.
+
+* cat <file> → Displays full file content
+* less <file> → Scroll through large files
+* head <file> → Shows first 10 lines
+* tail <file> → Shows last 10 lines
+
+Example:
+
+\`\`\`bash
+cat notes.txt
+head notes.txt
+\`\`\`
+
+## 🔍 4. Searching in Linux
+
+Finding files or specific text is very powerful in Linux.
+
+* grep "text" file → Searches for text inside a file
+* find . -name "filename" → Searches for files
+
+Example:
+
+\`\`\`bash
+grep "error" log.txt
+find . -name "app.py"
+\`\`\`
+
+## ⚙️ 5. File Permissions
+
+Linux is a multi-user system, so permissions matter.
+
+* chmod → Changes file permissions
+* chown → Changes file ownership
+
+Example:
+
+\`\`\`bash
+chmod 755 script.sh
+\`\`\`
+
+## 📦 6. Package Management (Debian/Ubuntu)
+
+Install and update software using package managers.
+
+* sudo apt update → Updates package list
+* sudo apt upgrade → Upgrades installed packages
+* sudo apt install <package> → Installs a package
+
+Example:
+
+\`\`\`bash
+sudo apt install git
+\`\`\`
+
+## 🧠 7. System Information Commands
+
+Check system performance and details.
+
+* top → Displays running processes
+* df -h → Shows disk usage
+* free -m → Shows memory usage
+* uname -a → Displays system info
     `,
     author: 'Edward Kindo',
     date: 'April 10, 2024',
     readTime: '8 min read',
-    category: 'Development',
-    image: 'https://images.unsplash.com/photo-1550439062-609e1531270e?auto=format&fit=crop&q=80&w=1200'
+    category: 'Linux',
+    image: '/images/linux1.png'
   }
 ];
