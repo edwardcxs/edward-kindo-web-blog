@@ -326,8 +326,6 @@ If you’re learning programming or Linux, understanding his story can give you 
     title: 'Basic Linux Commands You Should Know!',
     excerpt: 'A deep dive into why Framer Motion is the gold standard for React animations.',
     content: `
-      🐧 Basic Linux Commands You Should Know
-
 Linux powers everything from servers and cloud platforms to Android devices. If you're getting started with programming, cybersecurity, or system administration, learning basic Linux commands is a must.
 
 This guide covers the essential commands you’ll use daily.
@@ -437,7 +435,7 @@ Check system performance and details.
     date: 'April 10, 2024',
     readTime: '8 min read',
     category: 'Linux',
-    image: '/images/linux1.png'
+    image: '/images/linuX.png'
   },
   {
     id: 'linuxssh',
@@ -507,6 +505,101 @@ Features:
     date: 'April 10, 2024',
     readTime: '8 min read',
     category: 'Linux',
-    image: '/images/ssh.png'
+    image: '/images/ssh1.png'
+  },
+  {
+    id: 'Coding',
+    title: 'The Rise of the “Vibe Coder”: Coding with Flow, Not Friction',
+    excerpt: 'When you talk about Linux, one name stands above all—Linus Torvalds. He’s not just the creator of Linux.',
+    content: `
+
+In today’s fast-moving tech world, a new kind of developer is quietly emerging—the vibe coder. This isn’t a job title you’ll find on LinkedIn, but it perfectly describes a mindset. A vibe coder isn’t obsessed with rigid rules, endless tutorials, or overengineering. Instead, they focus on flow, creativity, and getting things done.
+
+Let’s explore what vibe coding really means and why it might be the most effective way to learn and build in 2026.
+
+## What is a Vibe Coder?
+
+A vibe coder is someone who codes with intuition and momentum. They don’t wait until they know everything—they start building, experimenting, and figuring things out along the way.
+
+Instead of asking:
+* “Am I ready to start this project?”
+They ask:
+* “Why not just try?”
+
+It’s less about perfection and more about progress.
+
+## The Core Mindset
+
+Vibe coding is not about being careless—it’s about being comfortable with imperfection.
+
+* You don’t need to memorize everything
+* You don’t need the perfect setup
+* You don’t need to follow every “best practice” from day one
+
+You just need to start. A vibe coder trusts the process:
+
+* Build → Break → Fix → Improve → Repeat
+
+## Why Vibe Coding Works
+
+1. You Learn Faster
+
+* When you build real projects instead of just watching tutorials, your brain connects concepts better. Mistakes become lessons.
+
+2. You Avoid Tutorial Hell
+
+* Many beginners get stuck watching videos without actually coding. Vibe coders skip that trap by learning through action.
+
+3. You Stay Motivated
+
+* Small wins—like fixing a bug or finishing a feature—keep your energy high. That momentum is powerful.
+
+4. You Build Real Skills
+
+* Reading about coding is not the same as coding. Vibe coders focus on doing, which leads to real experience.
+
+## Tools That Empower Vibe Coders
+
+Modern developers have access to tools that make vibe coding easier than ever:
+
+* AI assistants for quick help and debugging
+* Frameworks that reduce setup time
+* Open-source projects to learn from
+* Simple languages like Python for rapid development
+
+## How to Become a Vibe Coder
+
+You don’t need a special course—just a shift in approach:
+
+* Start small (a calculator, a to-do app, a mini game)
+* Don’t overthink—just begin
+* Google errors and fix them
+* Improve your project step by step
+* Ship your work, even if it’s not perfect
+
+The goal is simple: keep building.
+
+## The Reality Check
+
+Vibe coding is powerful, but it’s not magic.If you ignore fundamentals completely, you’ll hit limits. The best approach is balance:
+
+* Use vibe coding to start and explore
+* Use structured learning to go deeper when needed
+Conclusion
+
+The vibe coder mindset is about freedom—freedom to experiment, fail, and grow without pressure. In a world where technology evolves quickly, the ability to adapt and build fast matters more than knowing everything.
+So if you’ve been waiting for the “perfect time” to start coding, drop that idea.
+
+* Open your editor.
+* Write something messy.
+* Break it. Fix it. Improve it.
+
+That’s the vibe. 🚀
+    `,
+    author: 'Edward Kindo',
+    date: 'April 28, 2024',
+    readTime: '4 min read',
+    category: 'Technology',
+    image: '/images/vibe1.png'
   }
 ];
