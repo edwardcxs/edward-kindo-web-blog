@@ -927,6 +927,8 @@ In artificial intelligence and machine learning, GPUs are widely used because AI
 A CPU can run AI tasks, but it may be slower for large workloads. GPUs can process large datasets and matrix calculations much faster because of parallel processing.
 That is why many AI platforms, deep learning frameworks, and data centers use powerful GPUs.
 
+![CPU vs GPU Architectural Comparison](/images/gpu-vs-cpu-info.png)
+
 ## Integrated GPU vs Dedicated GPU
 
 There are two common types of GPUs: integrated GPU and dedicated GPU.An integrated GPU is built into the CPU. It is suitable for basic tasks like watching videos, browsing, light editing, and simple games.
@@ -940,7 +942,7 @@ Neither is completely better than the other. Both are designed for different pur
 * A GPU is better for graphics, rendering, gaming, AI, and workloads that require many calculations at the same time.
 A powerful computer needs both a good CPU and a good GPU. The right choice depends on what you want to do.
 
-##Conclusion
+## Conclusion
 
 The CPU and GPU are both essential parts of modern computers. The CPU acts as the main brain of the system, handling general tasks and decision-making. The GPU focuses on graphics and parallel processing, making it powerful for gaming, video editing, AI, and rendering.
 For everyday use, a good CPU is more important. For gaming, design, video editing, and AI projects, a strong GPU becomes very important.
