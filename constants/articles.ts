@@ -859,6 +859,6 @@ Understanding Python OOPs concepts is the bridge between being a scriptwriter an
     date: 'April 28, 2024',
     readTime: '4 min read',
     category: 'Python',
-    image: '/images/python.png'
+    image: '/images/py1.png'
   }
 ];
