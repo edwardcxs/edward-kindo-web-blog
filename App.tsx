@@ -144,6 +144,58 @@ const App: React.FC = () => {
     };
   }, [view]);
 
+  useEffect(() => {
+    const updateMetaTags = () => {
+      const isArticle = view === 'article' && selectedArticle;
+      const title = isArticle 
+        ? `${selectedArticle.title} | Edward Kindo` 
+        : view === 'blog' 
+          ? 'Blog | Edward Kindo' 
+          : 'Edward Kindo | UI/UX Designer';
+      
+      const description = isArticle 
+        ? selectedArticle.excerpt 
+        : 'Graphic designer and web developer building bold, modern digital experiences.';
+      
+      const image = isArticle 
+        ? `${window.location.origin}${selectedArticle.image}` 
+        : `${window.location.origin}/images/card.png`;
+      
+      const url = window.location.href;
+
+      document.title = title;
+
+      const metaTags: Record<string, string> = {
+        'description': description,
+        'og:title': title,
+        'og:description': description,
+        'og:image': image,
+        'og:url': url,
+        'twitter:title': title,
+        'twitter:description': description,
+        'twitter:image': image,
+        'twitter:url': url,
+      };
+
+      Object.entries(metaTags).forEach(([name, content]) => {
+        // Update both name and property for compatibility
+        const selectors = [`meta[name="${name}"]`, `meta[property="${name}"]`];
+        selectors.forEach(selector => {
+          let el = document.querySelector(selector);
+          if (!el && (name.startsWith('og:') || name.startsWith('twitter:'))) {
+            // Create if it doesn't exist
+            el = document.createElement('meta');
+            el.setAttribute(name.startsWith('og:') ? 'property' : 'name', name);
+            document.head.appendChild(el);
+          }
+          if (el) el.setAttribute('content', content);
+        });
+      });
+    };
+
+    updateMetaTags();
+  }, [view, selectedArticle]);
+
   return (
     <div className="min-h-screen bg-dark text-slate-50 selection:bg-blue-600 selection:text-white relative">
       {/* Technical Grid Background */}
