@@ -37,11 +37,16 @@ interface ArticleProps {
 
 export const Article: React.FC<ArticleProps> = ({ article, onBack, onSelectArticle }) => {
   useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo(0, 0);
   }, [article.id]);
 
-  // Filter out the current article to show "More Articles"
-  const moreArticles = ARTICLES.filter(a => a.id !== article.id).slice(0, 3);
+  // Filter out the current article and show all related articles by category
+  let moreArticles = ARTICLES.filter(a => a.id !== article.id && a.category === article.category);
+  
+  // If there are no related articles, fallback to showing all other articles
+  if (moreArticles.length === 0) {
+    moreArticles = ARTICLES.filter(a => a.id !== article.id);
+  }
 
   return (
     <article className="min-h-screen pt-32 pb-24 bg-white text-slate-900 relative z-20">

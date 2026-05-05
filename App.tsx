@@ -25,18 +25,23 @@ const App: React.FC = () => {
       const path = window.location.pathname;
       if (path === '/blog') {
         setView('blog');
+        window.scrollTo(0, 0);
       } else if (path.startsWith('/blog/')) {
         const id = path.split('/')[2];
         if (id) {
           setSelectedArticleId(id);
           setView('article');
+          window.scrollTo(0, 0);
         } else {
           setView('blog');
+          window.scrollTo(0, 0);
         }
       } else if (path === '/privacy') {
         setView('privacy');
+        window.scrollTo(0, 0);
       } else if (path === '/gallery') {
         setView('gallery');
+        window.scrollTo(0, 0);
       } else {
         setView('home');
         if (window.location.hash) {
@@ -44,6 +49,8 @@ const App: React.FC = () => {
             const element = document.getElementById(window.location.hash.substring(1));
             if (element) element.scrollIntoView({ behavior: 'smooth' });
           }, 100);
+        } else {
+          window.scrollTo(0, 0);
         }
       }
     };
@@ -59,21 +66,21 @@ const App: React.FC = () => {
     if (sectionId === 'blog') {
       window.history.pushState({}, '', '/blog');
       setView('blog');
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      window.scrollTo(0, 0);
       return;
     }
 
     if (sectionId === 'privacy') {
       window.history.pushState({}, '', '/privacy');
       setView('privacy');
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      window.scrollTo(0, 0);
       return;
     }
 
     if (sectionId === 'work') {
       window.history.pushState({}, '', '/gallery');
       setView('gallery');
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      window.scrollTo(0, 0);
       return;
     }
 
