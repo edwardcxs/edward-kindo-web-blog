@@ -20,27 +20,65 @@ const App: React.FC = () => {
   const [view, setView] = useState<'home' | 'gallery' | 'blog' | 'article' | 'privacy'>('home');
   const [selectedArticleId, setSelectedArticleId] = useState<string | null>(null);
 
+  useEffect(() => {
+    const handleLocationChange = () => {
+      const path = window.location.pathname;
+      if (path === '/blog') {
+        setView('blog');
+      } else if (path.startsWith('/blog/')) {
+        const id = path.split('/')[2];
+        if (id) {
+          setSelectedArticleId(id);
+          setView('article');
+        } else {
+          setView('blog');
+        }
+      } else if (path === '/privacy') {
+        setView('privacy');
+      } else if (path === '/gallery') {
+        setView('gallery');
+      } else {
+        setView('home');
+        if (window.location.hash) {
+          setTimeout(() => {
+            const element = document.getElementById(window.location.hash.substring(1));
+            if (element) element.scrollIntoView({ behavior: 'smooth' });
+          }, 100);
+        }
+      }
+    };
+
+    window.addEventListener('popstate', handleLocationChange);
+    handleLocationChange();
+
+    return () => window.removeEventListener('popstate', handleLocationChange);
+  }, []);
+
   const handleNavigate = (sectionId: string) => {
     // Special cases
     if (sectionId === 'blog') {
+      window.history.pushState({}, '', '/blog');
       setView('blog');
       window.scrollTo({ top: 0, behavior: 'smooth' });
       return;
     }
 
     if (sectionId === 'privacy') {
+      window.history.pushState({}, '', '/privacy');
       setView('privacy');
       window.scrollTo({ top: 0, behavior: 'smooth' });
       return;
     }
 
     if (sectionId === 'work') {
+      window.history.pushState({}, '', '/gallery');
       setView('gallery');
       window.scrollTo({ top: 0, behavior: 'smooth' });
       return;
     }
 
     const targetId = sectionId === 'home' ? 'home' : sectionId;
+    window.history.pushState({}, '', sectionId === 'home' ? '/' : `/#${targetId}`);
 
     const scrollToTarget = () => {
       if (targetId === 'home') {
@@ -63,6 +101,7 @@ const App: React.FC = () => {
   };
 
   const handleSelectArticle = (articleId: string) => {
+    window.history.pushState({}, '', `/blog/${articleId}`);
     setSelectedArticleId(articleId);
     setView('article');
     window.scrollTo(0, 0);
@@ -119,6 +158,7 @@ const App: React.FC = () => {
               <About />
               <Services />
               <Work onViewGallery={() => {
+                window.history.pushState({}, '', '/gallery');
                 setView('gallery');
                 window.scrollTo(0, 0);
               }} />
@@ -131,6 +171,7 @@ const App: React.FC = () => {
           
           {view === 'gallery' && (
             <WorkGallery onBack={() => {
+              window.history.pushState({}, '', '/');
               setView('home');
               window.scrollTo(0, 0);
             }} />
@@ -143,13 +184,19 @@ const App: React.FC = () => {
           {view === 'article' && selectedArticle && (
             <Article 
               article={selectedArticle} 
-              onBack={() => setView('blog')} 
+              onBack={() => {
+                window.history.pushState({}, '', '/blog');
+                setView('blog');
+              }} 
               onSelectArticle={handleSelectArticle}
             />
           )}
 
           {view === 'privacy' && (
-            <PrivacyPolicy onBack={() => setView('home')} />
+            <PrivacyPolicy onBack={() => {
+              window.history.pushState({}, '', '/');
+              setView('home');
+            }} />
           )}
         </main>
         
