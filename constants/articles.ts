@@ -14,7 +14,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'ai-studio',
     title: 'Why Google AI Studio Is One of the Best Platforms for Building AI Projects',
-    excerpt: 'How to build products that look exactly like the Figma mockups while maintaining performance.',
+    excerpt: 'Artificial Intelligence is no longer a futuristic concept—it’s a practical tool shaping how we build apps.',
     content: `
 
 ## Why Google AI Studio Is One of the Best Platforms for Building AI Projects
@@ -860,5 +860,96 @@ Understanding Python OOPs concepts is the bridge between being a scriptwriter an
     readTime: '4 min read',
     category: 'Python',
     image: '/images/py1.png'
+  },
+  {
+    id: 'Technoloy2',
+    title: 'GPU vs CPU: What’s the Difference and Why It Matters',
+    excerpt: 'Computers are powerful machines, but their speed depends heavily on how they process information.',
+    content: `
+## What Is a CPU?
+The CPU is the main processor of a computer. It performs instructions given by software and manages most of the system’s operations.
+A CPU is designed to handle a wide variety of tasks. It is very good at completing complex instructions one after another. This makes it useful for everyday computing tasks such as:
+* Opening applications
+* Running the operating system
+* Browsing the web
+* Writing documents
+* Managing files
+* Running programming code
+* Handling background processes
+Modern CPUs usually have multiple cores, such as 4, 6, 8, 12, or more. These cores allow the CPU to handle multiple tasks at the same time, but compared to GPUs, CPUs have fewer cores.
+
+## What Is a GPU?
+
+The GPU is a specialized processor designed to handle many simple tasks at the same time. It was first created mainly for rendering images, videos, animations, and 3D graphics.
+Today, GPUs are used in many advanced fields because they are excellent at parallel processing. This means they can perform thousands of calculations at once.
+GPUs are commonly used for:
+* Gaming
+* 3D rendering
+* Video editing
+* Animation
+* AI and machine learning
+* Data science
+* Cryptocurrency mining
+* Scientific simulations
+* Image and video processing
+A GPU usually has hundreds or thousands of smaller cores. These cores are not as flexible as CPU cores, but they are extremely fast when handling repeated tasks.
+
+## Why CPUs Are Important
+Without a CPU, a computer cannot function properly. The CPU controls the system and makes sure all components work together. It handles instructions from software and communicates with memory, storage, and input/output devices.
+For normal users, a strong CPU improves performance in daily tasks like multitasking, programming, office work, browsing, and running applications smoothly.
+A good CPU is important for:
+* Students
+* Programmers
+* Office users
+* Web developers
+* General computer users
+* People who multitask a lot
+## Why GPUs Are Important
+GPUs are extremely important for visual and heavy computational tasks. If you play games, edit videos, create 3D models, or work with AI tools, a powerful GPU can make a huge difference.
+For example, in gaming, the GPU renders frames and graphics. In video editing, it helps process effects and exports faster. In AI, GPUs are used to train and run large models because they can handle huge amounts of data in parallel.
+A good GPU is important for:
+* Gamers
+* Video editors
+* Graphic designers
+* 3D artists
+* AI developers
+* Data scientists
+* Animation creators
+## CPU and GPU in Gaming
+In gaming, both CPU and GPU are important, but the GPU usually has the bigger role in graphics performance.
+The GPU handles visuals such as textures, lighting, shadows, and frame rendering. A better GPU usually means higher FPS, better graphics quality, and smoother gameplay.
+The CPU handles game logic, physics, AI behavior, background tasks, and communication between components. If the CPU is too weak, it can limit the performance of the GPU. This is called a bottleneck.
+For gaming, a balanced CPU and GPU combination is best.
+
+## CPU and GPU in AI
+
+In artificial intelligence and machine learning, GPUs are widely used because AI models require huge numbers of mathematical calculations.
+A CPU can run AI tasks, but it may be slower for large workloads. GPUs can process large datasets and matrix calculations much faster because of parallel processing.
+That is why many AI platforms, deep learning frameworks, and data centers use powerful GPUs.
+
+## Integrated GPU vs Dedicated GPU
+
+There are two common types of GPUs: integrated GPU and dedicated GPU.An integrated GPU is built into the CPU. It is suitable for basic tasks like watching videos, browsing, light editing, and simple games.
+A dedicated GPU is a separate graphics card with its own memory. It is much more powerful and is used for gaming, editing, rendering, and AI workloads.
+If you only do normal computer work, integrated graphics may be enough. But for heavy creative or technical work, a dedicated GPU is much better.
+
+## Which One Is Better: CPU or GPU?
+
+Neither is completely better than the other. Both are designed for different purposes.
+* A CPU is better for general tasks, multitasking, running software, and controlling the computer.
+* A GPU is better for graphics, rendering, gaming, AI, and workloads that require many calculations at the same time.
+A powerful computer needs both a good CPU and a good GPU. The right choice depends on what you want to do.
+
+##Conclusion
+
+The CPU and GPU are both essential parts of modern computers. The CPU acts as the main brain of the system, handling general tasks and decision-making. The GPU focuses on graphics and parallel processing, making it powerful for gaming, video editing, AI, and rendering.
+For everyday use, a good CPU is more important. For gaming, design, video editing, and AI projects, a strong GPU becomes very important.
+In simple words: CPU handles the logic, GPU handles the heavy visual and parallel workload. A balanced combination of both gives the best performance.
+    `,
+    author: 'Edward Kindo',
+    date: 'April 28, 2024',
+    readTime: '4 min read',
+    category: 'Technology',
+    image: '/images/gpu.png'
   }
 ];
