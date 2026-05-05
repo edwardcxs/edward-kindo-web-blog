@@ -767,7 +767,7 @@ If you want to crack top tech interviews or build powerful applications, masteri
     date: 'April 28, 2024',
     readTime: '4 min read',
     category: 'Technology',
-    image: '/images/system1.png'
+    image: '/images/sys.png'
   },
   {
     id: 'Python1',
