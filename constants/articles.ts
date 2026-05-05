@@ -767,7 +767,7 @@ If you want to crack top tech interviews or build powerful applications, masteri
     date: 'April 28, 2024',
     readTime: '4 min read',
     category: 'Technology',
-    image: '/images/system.png'
+    image: '/images/system1.png'
   },
   {
     id: 'Python1',
@@ -922,28 +922,22 @@ The CPU handles game logic, physics, AI behavior, background tasks, and communic
 For gaming, a balanced CPU and GPU combination is best.
 
 ## CPU and GPU in AI
-
 In artificial intelligence and machine learning, GPUs are widely used because AI models require huge numbers of mathematical calculations.
 A CPU can run AI tasks, but it may be slower for large workloads. GPUs can process large datasets and matrix calculations much faster because of parallel processing.
 That is why many AI platforms, deep learning frameworks, and data centers use powerful GPUs.
 
-![CPU vs GPU Architectural Comparison](/images/gpu-vs-cpu-info.png)
+![CPU vs GPU Architectural Comparison](/images/gpu.png)
 
 ## Integrated GPU vs Dedicated GPU
-
 There are two common types of GPUs: integrated GPU and dedicated GPU.An integrated GPU is built into the CPU. It is suitable for basic tasks like watching videos, browsing, light editing, and simple games.
 A dedicated GPU is a separate graphics card with its own memory. It is much more powerful and is used for gaming, editing, rendering, and AI workloads.
 If you only do normal computer work, integrated graphics may be enough. But for heavy creative or technical work, a dedicated GPU is much better.
-
 ## Which One Is Better: CPU or GPU?
-
 Neither is completely better than the other. Both are designed for different purposes.
 * A CPU is better for general tasks, multitasking, running software, and controlling the computer.
 * A GPU is better for graphics, rendering, gaming, AI, and workloads that require many calculations at the same time.
 A powerful computer needs both a good CPU and a good GPU. The right choice depends on what you want to do.
-
 ## Conclusion
-
 The CPU and GPU are both essential parts of modern computers. The CPU acts as the main brain of the system, handling general tasks and decision-making. The GPU focuses on graphics and parallel processing, making it powerful for gaming, video editing, AI, and rendering.
 For everyday use, a good CPU is more important. For gaming, design, video editing, and AI projects, a strong GPU becomes very important.
 In simple words: CPU handles the logic, GPU handles the heavy visual and parallel workload. A balanced combination of both gives the best performance.
@@ -952,6 +946,6 @@ In simple words: CPU handles the logic, GPU handles the heavy visual and paralle
     date: 'April 28, 2024',
     readTime: '4 min read',
     category: 'Technology',
-    image: '/images/gpu.png'
+    image: '/images/cpu.png'
   }
 ];

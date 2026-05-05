@@ -165,6 +165,25 @@ export const Article: React.FC<ArticleProps> = ({ article, onBack, onSelectArtic
                             elements.push(<li key={i} className="text-slate-600 mb-2 list-none flex items-center gap-3"><span className="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> {line.replace('* ', '')}</li>);
                             return;
                         }
+
+                        // Image handling: ![alt](src)
+                        if (line.trim().startsWith('![') && line.includes('](')) {
+                            const altMatch = line.match(/!\[(.*?)\]/);
+                            const srcMatch = line.match(/\((.*?)\)/);
+                            if (altMatch && srcMatch) {
+                                elements.push(
+                                    <div key={`img-${i}`} className="my-12 aspect-video overflow-hidden bg-slate-100 shadow-xl">
+                                        <img 
+                                            src={srcMatch[1]} 
+                                            alt={altMatch[1]} 
+                                            className="w-full h-full object-cover"
+                                        />
+                                    </div>
+                                );
+                                return;
+                            }
+                        }
+
                         if (line.trim() === '') {
                             elements.push(<br key={i} />);
                             return;
